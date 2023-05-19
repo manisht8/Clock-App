@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clock App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div class="header" id="banner">
+            <h1 id="main-header">Clock App</h1>
+        </div>
+        <div id="nav">
+            <div class="nav-item"><a href="#world-clock">World Clock</a></div>
+            <div class="nav-item"><a href="#alarm-clock">Alarm Clock</a></div>
+            <div class="nav-item"><a href="#timer">Timer</a></div>
+            <div class="nav-item"><a href="#stopwatch">Stopwatch</a></div>
+        </div>
+        <div id="content">
+
+            <!-- World Clock  -->
+            <hr>
+            <section id="world-clock">
+                <h1 class="section-heading">World Clock</h1>
+                <div class="row">
+                    <div class="clock-container">
+                        <div>
+                            <h3 class="country-header">India</h3>
+                        </div>
+                        <div class="world-clock-time">
+                            <p id="india"></p>
+                        </div>
+                    </div>
+                    <div class="clock-container">
+                        <div>
+                            <h3 class="country-header">Australia (Sydney)</h3>
+                        </div>
+                        <div class="world-clock-time">
+                            <p id="australia"></p>
+                        </div>
+                    </div>
+                    <div class="clock-container">
+                        <div>
+                            <h3 class="country-header">United Kingdom</h3>
+                        </div>
+                        <div class="world-clock-time">
+                            <p id="england"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr>
+
+            <!-- Alarm Clock -->
+            <section id="alarm-clock">
+                <h1 class="section-heading">Alarm Clock</h1>
+                <div id="alarm-container">
+                    <div class="row">
+                        <label for="alarm">Enter Time to Set Alarm : </label>
+                        <input type="datetime-local" class="time-input" id="alarm">
+                    </div>
+                    <div class="row">
+                        <button class="btn" onclick="setAlarm()" id="addAlarm">Set Alarm</button>
+                        <button class="btn" onclick="stopAlarm()">Stop Alarm</button>
+                    </div>
+                    <div class="row">
+                        <ul id ="alarmsListContainer">
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <hr>
+
+            <!-- Timer -->
+            <section id="timer">
+                <h1 class="section-heading">Timer</h1>
+                <div id="timer-container">
+                    <div class="row">
+                        <label for="countdown-timer" id="time-input-label">Enter Time to Set Timer : </label>
+                        <input type="datetime-local" class="time-input" id="countdown-timer">
+                        <button class="btn" onclick="startTimer()" id="timer-start-btn">Start Timer</button>
+                        <button class="btn" onclick="stopTimer()" id="timer-stop-btn" hidden>Stop Timer</button>
+                    </div>
+                    <div class="row">
+                        <div class="countdown-box">
+                            <input type="text" class="countdown-display" id="days" value="0" readonly>
+                            <label for="days">Days</label>
+                        </div>
+                        <div class="countdown-box">
+                            <input type="text" class="countdown-display" id="hours" value="0" readonly>
+                            <label for="hours">Hours</label>
+                        </div>
+                        <div class="countdown-box">
+                            <input type="text" class="countdown-display" id="minutes" value="0"readonly>
+                            <label for="minutes">Minutes</label>
+                        </div>
+                        <div class="countdown-box">
+                            <input type="text" class="countdown-display" id="seconds" value="0" readonly>
+                            <label for="seconds">Seconds</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr>
+
+            <!-- Stopwatch -->
+            <section id="stopwatch">
+                <h1 class="section-heading">Stopwatch</h1>
+                <div id="stopwatch-container">
+                    <div class="row">
+                        <div class="countdown-box">
+                            <input type="text" class="countdown-display" id="hrs" value="0" readonly>
+                            <label for="hrs">Hours</label>
+                        </div>
+                        <div class="countdown-box">
+                            <input type="text" class="countdown-display" id="mins" value="0" readonly>
+                            <label for="mins">Minutes</label>
+                        </div>
+                        <div class="countdown-box">
+                            <input type="text" class="countdown-display" id="secs" value="0" readonly>
+                            <label for="secs">Seconds</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="btn" onclick="stopStopwatch()">Stop</button>
+                        <button class="btn" onclick="startStopwatch()">Start</button>
+                        <button class="btn" onclick="resetStopwatch()">Reset</button>
+                    </div>
+                </div>
+            </section>
+            <hr>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
