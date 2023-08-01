@@ -1,3 +1,25 @@
+let sections = document.querySelectorAll('section');
+let nav_items = document.querySelectorAll('.nav-item')
+
+function showSection(sectionId) {
+    sections.forEach(section => {
+      if (section.getAttribute("id") === sectionId) {
+        section.classList.add('show');
+        section.classList.remove('hide');
+      } else {
+        section.classList.add('hide');
+        section.classList.remove('show');
+      }
+    });
+  }
+
+nav_items.forEach(nav_item => {
+    nav_item.addEventListener('click', (e) => {
+        let sectionId = nav_item.dataset.section;
+        showSection(sectionId);
+    })
+});
+
 // **************************** world-clock ****************************
 function convertTZ(date, tzString) {
     return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));   

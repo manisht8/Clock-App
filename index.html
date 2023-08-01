@@ -13,16 +13,16 @@
             <h1 id="main-header">Clock App</h1>
         </div>
         <div id="nav">
-            <div class="nav-item"><a href="#world-clock">World Clock</a></div>
-            <div class="nav-item"><a href="#alarm-clock">Alarm Clock</a></div>
-            <div class="nav-item"><a href="#timer">Timer</a></div>
-            <div class="nav-item"><a href="#stopwatch">Stopwatch</a></div>
+            <div class="nav-item" data-section="world-clock"><a href="#">World Clock</a></div>
+            <div class="nav-item" data-section="alarm-clock"><a href="#">Alarm Clock</a></div>
+            <div class="nav-item" data-section="timer"><a href="#">Timer</a></div>
+            <div class="nav-item" data-section="stopwatch"><a href="#">Stopwatch</a></div>
         </div>
         <div id="content">
 
             <!-- World Clock  -->
-            <hr>
-            <section id="world-clock">
+            <section id="world-clock" class="show">
+                <!-- <hr> -->
                 <h1 class="section-heading">World Clock</h1>
                 <div class="row">
                     <div class="clock-container">
@@ -51,10 +51,10 @@
                     </div>
                 </div>
             </section>
-            <hr>
-
+            
             <!-- Alarm Clock -->
-            <section id="alarm-clock">
+            <section id="alarm-clock" class="hide">
+                <!-- <hr> -->
                 <h1 class="section-heading">Alarm Clock</h1>
                 <div id="alarm-container">
                     <div class="row">
@@ -71,10 +71,10 @@
                     </div>
                 </div>
             </section>
-            <hr>
-
+            
             <!-- Timer -->
-            <section id="timer">
+            <section id="timer" class="hide">
+                <!-- <hr> -->
                 <h1 class="section-heading">Timer</h1>
                 <div id="timer-container">
                     <div class="row">
@@ -103,10 +103,10 @@
                     </div>
                 </div>
             </section>
-            <hr>
-
+            
             <!-- Stopwatch -->
-            <section id="stopwatch">
+            <section id="stopwatch" class="hide">
+                <!-- <hr> -->
                 <h1 class="section-heading">Stopwatch</h1>
                 <div id="stopwatch-container">
                     <div class="row">
@@ -129,8 +129,8 @@
                         <button class="btn" onclick="resetStopwatch()">Reset</button>
                     </div>
                 </div>
+                <!-- <hr> -->
             </section>
-            <hr>
         </div>
     </div>
     <script src="script.js"></script>
